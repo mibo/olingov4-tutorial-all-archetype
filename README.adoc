@@ -1,0 +1,30 @@
+= Archetype to create Olingo V4 Tutorial Project (_p0_all - Fork_)
+
+This is a https://maven.apache.org/archetype/index.html[Maven archetype] to create a Olingo V4 sample project (based on https://github.com/mibo/olingov4-tutorial-all[this Olingo V4 Sample Project Fork]).
+
+== Prerequisites
+Are the same as https://github.com/mibo/olingov4-tutorial-all/blob/master/README.adoc#prerequisites[here described]:
+
+NOTE: You need to use Maven 3 and Java 8 for this tutorial (archetype).
+
+== Usage
+
+=== Install maven archetype locally
+Checkout this project and run `mvn install` to install actual version (`4.2.0-SNAPSHOT`) to your local maven archetype repository. +
+Afterwards the sample project can be created via the archetype (see next section).
+
+=== Create sample project
+To create the sample project (based on this archetype) just type and run following maven command in your shell:
+
+[source,bash]
+----
+mvn archetype:generate \
+  -DinteractiveMode=false \
+  -Dversion=1.0.0-SNAPSHOT \
+  -DgroupId=org.olingo.sample \
+  -DartifactId=olingov4-all-tutorial \
+  -DarchetypeGroupId=org.apache.olingo \
+  -DarchetypeArtifactId=Olingo-V4-DemoService-archetype \
+  -DarchetypeVersion=4.2.0-SNAPSHOT \
+  -DarchetypeCatalog=local
+----
